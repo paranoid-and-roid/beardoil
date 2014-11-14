@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Beard Oil</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	
+	<div id="container">
+		
+		<header>
+			<div class="beard"><%= image_tag('beard.png') %></div>
+			<h1>Ginger Cub</h1>
+			<p>Beard Oils for the best man you can be</p>
+		</header>
+		
+		<nav>
+			<ul>
+				<li><%= link_to "Home", products_path %></li>
+				<li><%= link_to "Your Cart", your_cart_path %></li>
+				<li><%= link_to "Comments", :controller => "comment" %></li>
+				<li><%= link_to "Contact Us", :controller => "contact" %></li>
+			</ul>
+		</nav>
+
+		<section>
+			<%= yield %>
+		</section>
+
+	</div>
+
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+</body>
+</html>
